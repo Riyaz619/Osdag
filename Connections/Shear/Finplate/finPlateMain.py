@@ -15,6 +15,7 @@ from ui_finPlate import Ui_MainWindow
 from ui_summary_popup import Ui_Dialog
 from ui_aboutosdag import Ui_HelpOsdag
 from ui_tutorial import Ui_Tutorial
+from ui_svg_image import Ui_WizardPage
 from model import *
 from finPlateCalc import finConn
 #import yaml
@@ -53,11 +54,21 @@ import pdfkit
 import shutil
 # import cairosvg
 import webbrowser
+from PyQt4.QtGui import QPixmap
 # from PIL import Image
 
 # from OCC.Display.backend import get_backend
 # get_backend("qt-pyqt4")
 # import OCC.Display.qtDisplay
+
+class Mysvg(QtGui.QWizardPage):
+    def __init__(self, parent=None):
+        QtGui.QFrame.__init__(self,parent)
+        self.ui = Ui_WizardPage()
+        self.ui.setupUi(self)
+        self.mainController = parent
+        
+
 class MyTutorials(QtGui.QDialog):
     def __init__(self, parent=None):
         QtGui.QDialog.__init__(self, parent)
@@ -87,7 +98,6 @@ class MyPopupDialog(QtGui.QDialog ):
         
     def save_inputSummary(self):
         input_summary = self.getPopUpInputs()
-#         base_name = self.mainController.call2D_Drawing()
         self.mainController.save_design(input_summary)
         #return input_summary
         
@@ -1694,13 +1704,14 @@ class MainController(QtGui.QMainWindow):
         SVG image created through svgwrite package which takes design INPUT and OUTPUT parameters from Finplate GUI.
         '''
         base = ''
+#         global callDesired_View , base_front, base_side, base_top
+        base_front = ''
+        base_side = ''
+        base_top = ''
         
         loc = self.ui.comboConnLoc.currentText()
         if view == "All":
             fileName = ''
-            base_front = ''
-            base_side = ''
-            base_top = ''
             
             base1, base2, base3 = self.callDesired_View(fileName, view, base_front, base_top, base_side)
             self.display.set_bg_gradient_color(255,255,255,255,255,255)
@@ -1708,7 +1719,7 @@ class MainController(QtGui.QMainWindow):
             if loc == "Column flange-Beam web":
                     
                 data = str(self.folder) + "/css/3D_ModelFinFB.png"
-                for n in range(1,100,1):
+                for n in range(1,3,1):
                     if (os.path.exists(data)):
                         data = str(self.folder) + "/css/3D_ModelFinFB" + str(n) + ".png" 
                         continue
@@ -1716,7 +1727,7 @@ class MainController(QtGui.QMainWindow):
 
             elif loc == "Column web-Beam web":
                 data = str(self.folder) +  "/css/3D_ModelFinWB.png"
-                for n in range(1,100,1):
+                for n in range(1,3,1):
                     if (os.path.exists(data)):
                         data = str(self.folder) + "/css/3D_ModelFinWB" + str(n) + ".png"
                         continue
@@ -1725,28 +1736,27 @@ class MainController(QtGui.QMainWindow):
                 
             else:
                 data = str(self.folder) +  "/css/3D_ModelFinBB.png"
-                for n in range(1,100,1):
+                for n in range(1,3,1):
                     if (os.path.exists(data)):
                         data = str(self.folder) + "/css/3D_ModelFinBB" + str(n) + ".png"
                         continue
                 base = os.path.basename(str(data))
             
             self.display.ExportToImage(data)
+            
 
-            
         else:
-#             fileName = webbrowser.open_new(r'file:///untitled.svg')
-            
+
             fileName =  QtGui.QFileDialog.getSaveFileName(self,
                     "Save SVG", str(self.folder) +'/untitled.svg',
                     "SVG files (*.svg)")
             f = open(fileName,'w')
             
-            self.callDesired_View(fileName,view, base_front, base_top, base_side)
-#             self.callDesired_View(fileName, view)
-#             f.close()
-
+            base1, base2, base3 = self.callDesired_View(fileName,view, base_front, base_top, base_side)
+            QtGui.QMessageBox.about(self,'Information',"File saved")
+            f.close()
         return (base, base1, base2, base3)
+
            
         
     def callDesired_View(self,fileName,view, base_front, base_top, base_side):

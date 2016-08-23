@@ -381,7 +381,7 @@ class FinCommonData(object):
 #                 tree.write(mod_svg)
 #                 cairosvg.svg2png(bytestring = str(self.folder) + "/css/finFrontFB.svg", write_to = str(self.folder) + '/css/finFrontFB.png' )
                 fileName = str(self.folder) + '/css/finFrontFB.svg'
-                for n in range(1,100,1):
+                for n in range(1,3,1):
                     if (os.path.exists(fileName)):
                         fileName = str(self.folder) + "/css/finFrontFB" + str(n) + ".svg"
                         continue
@@ -391,7 +391,7 @@ class FinCommonData(object):
                 
 #                 cairosvg.svg2png(bytestring = str(self.folder) + "/css/finSideFB.svg", write_to = str(self.folder) + '/css/finSideFB.png' )
                 fileName = str(self.folder) + '/css/finSideFB.svg'
-                for n in range(1,100,1):
+                for n in range(1,3,1):
                     if (os.path.exists(fileName)):
                         fileName = str(self.folder) + "/css/finSideFB" + str(n) + ".svg"
                         continue
@@ -401,7 +401,7 @@ class FinCommonData(object):
                 
 #                 cairosvg.svg2png(bytestring = str(self.folder) + "/css/finTopFB.svg", write_to = str(self.folder) + '/css/finTopFB.png' )
                 fileName = str(self.folder) + '/css/finTopFB.svg'
-                for n in range(1,100,1):
+                for n in range(1,3,1):
                     if (os.path.exists(fileName)):
                         fileName = str(self.folder) + "/css/finTopFB" + str(n) + ".svg"
                         continue
@@ -419,7 +419,7 @@ class FinCommonData(object):
             else:
 #                 cairosvg.svg2png(bytestring = str(self.folder)+ "/css/FinFrontWB.svg", write_to = str(self.folder)+ '/css/FinFrontWB.png')
                 fileName = str(self.folder) + '/css/FinFrontWB.svg'
-                for n in range(1,100,1):
+                for n in range(1,3,1):
                     if (os.path.exists(fileName)):
                         fileName = str(self.folder) + "/css/FinFrontWB" + str(n) + ".svg"
                         continue
@@ -427,7 +427,7 @@ class FinCommonData(object):
                 base_front = os.path.basename(str(fileName))
 
                 fileName = str(self.folder) + '/css/FinSideWB.svg'
-                for n in range(1,100,1):
+                for n in range(1,3,1):
                     if (os.path.exists(fileName)):
                         fileName = str(self.folder) + "/css/FinSideWB" + str(n) + ".svg"
                         continue
@@ -437,7 +437,7 @@ class FinCommonData(object):
 
 #                 cairosvg.svg2png(bytestring = str(self.folder) + "/css/FinTopWB.svg", write_to = str(self.folder)+ '/css/FinTopWB.png')
                 fileName = str(self.folder) + '/css/FinTopWB.svg'
-                for n in range(1,100,1):
+                for n in range(1,3,1):
                     if (os.path.exists(fileName)):
                         fileName = str(self.folder) + "/css/FinTopWB" + str(n) + ".svg"
                         continue
@@ -453,7 +453,7 @@ class FinCommonData(object):
                 fin2DTop.callBWBWTop(fileName)
             else:
                 fileName = str(self.folder) + '/css/finFrontBB.svg'
-                for n in range(1,100,1):
+                for n in range(1,3,1):
                     if (os.path.exists(fileName)):
                         fileName = str(self.folder) + "/css/finFrontBB" + str(n) + ".svg"
                         continue
@@ -462,7 +462,7 @@ class FinCommonData(object):
                 
                 
                 fileName = str(self.folder) + '/css/finSideBB.svg'
-                for n in range(1,100,1):
+                for n in range(1,3,1):
                     if (os.path.exists(fileName)):
                         fileName = str(self.folder) + "/css/finSideBB" + str(n) + ".svg"
                         continue
@@ -471,7 +471,7 @@ class FinCommonData(object):
                 
                 
                 fileName = str(self.folder) + '/css/finTopBB.svg'
-                for n in range(1,100,1):
+                for n in range(1,3,1):
                     if (os.path.exists(fileName)):
                         fileName = str(self.folder) + "/css/finTopBB" + str(n) + ".svg"
                         continue

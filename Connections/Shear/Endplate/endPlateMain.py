@@ -1715,15 +1715,17 @@ class MainController(QtGui.QMainWindow):
         self.ui.btn3D.setChecked(QtCore.Qt.Unchecked)
         
         base = ''
+        base_front = ''
+        base_side = ''
+        base_top = ''
+
         loc = self.ui.comboConnLoc.currentText()
         if view == "All":
             fileName = ''
-            base_front = ''
-            base_side = ''
-            base_top = ''
-
+            
             base1, base2, base3 = self.callDesired_View(fileName, view, base_front, base_top, base_side)
             self.display.set_bg_gradient_color(255,255,255,255,255,255)
+            
             if loc == "Column flange-Beam web":
                 data = str(self.folder) + "/css/3D_ModelEndFB.png"
                 for n in range(1,100,1):
@@ -1758,8 +1760,8 @@ class MainController(QtGui.QMainWindow):
                     "SVG files (*.svg)")
             f = open(fileName,'w')
             
-            self.callDesired_View(fileName, view, base_front, base_top, base_side)
-           
+            base1, base2, base3 = self.callDesired_View(fileName, view, base_front, base_top, base_side)
+            QtGui.QMessageBox.about(self,'Information',"File saved")
             f.close()
         return (base, base1, base2, base3)
            

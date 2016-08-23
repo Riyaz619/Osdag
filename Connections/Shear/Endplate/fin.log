@@ -1,27 +1,79 @@
 <link rel="stylesheet" type="text/css" href="Connections/Shear/Endplate/log.css"/>
 
     <div  class="LOG INFO">
-        <span class="DATE">Thu, 18 Aug 2016 11:43:39</span>
+        <span class="DATE">Tue, 23 Aug 2016 11:01:57</span>
         <span class="LEVEL">INFO</span>
         <span class="MSG">: Overall endplate connection design is safe 
 </span>
     </div>
 
     <div  class="LOG DEBUG">
-        <span class="DATE">Thu, 18 Aug 2016 11:43:39</span>
+        <span class="DATE">Tue, 23 Aug 2016 11:01:57</span>
         <span class="LEVEL">DEBUG</span>
         <span class="MSG"> :=========End Of design===========</span>
     </div>
 
     <div  class="LOG INFO">
-        <span class="DATE">Thu, 18 Aug 2016 11:43:39</span>
+        <span class="DATE">Tue, 23 Aug 2016 11:01:57</span>
         <span class="LEVEL">INFO</span>
         <span class="MSG">: Overall endplate connection design is safe 
 </span>
     </div>
 
     <div  class="LOG DEBUG">
-        <span class="DATE">Thu, 18 Aug 2016 11:43:39</span>
+        <span class="DATE">Tue, 23 Aug 2016 11:01:57</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 23 Aug 2016 11:02:05</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall endplate connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 23 Aug 2016 11:02:05</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 23 Aug 2016 11:02:10</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall endplate connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 23 Aug 2016 11:02:10</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 23 Aug 2016 11:02:17</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall endplate connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 23 Aug 2016 11:02:17</span>
+        <span class="LEVEL">DEBUG</span>
+        <span class="MSG"> :=========End Of design===========</span>
+    </div>
+
+    <div  class="LOG INFO">
+        <span class="DATE">Tue, 23 Aug 2016 11:02:26</span>
+        <span class="LEVEL">INFO</span>
+        <span class="MSG">: Overall endplate connection design is safe 
+</span>
+    </div>
+
+    <div  class="LOG DEBUG">
+        <span class="DATE">Tue, 23 Aug 2016 11:02:26</span>
         <span class="LEVEL">DEBUG</span>
         <span class="MSG"> :=========End Of design===========</span>
     </div>
